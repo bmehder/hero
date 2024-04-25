@@ -95,8 +95,10 @@
 	}
 
 	.hero-items {
+    max-width: 48rem;
 		min-height: 100%;
 		display: grid;
+    margin-inline: auto;
 	}
 
 	.main-heading, .lead-heading {

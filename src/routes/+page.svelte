@@ -1,5 +1,5 @@
 <script>
-  import '@picocss/pico'
+	import '@picocss/pico'
 	import { backgoundImage, lorem32 } from '$lib/utils.js'
 	import Hero from '$lib/Hero.svelte'
 	import Controls from '$lib/Controls.svelte'
@@ -63,13 +63,7 @@
 
 <div class="app">
 	<Hero bind:app bind:content bind:leadHeading bind:mainHeading bind:button />
-
 	<main class="container">
-		<div class="input-group">
-			<label for="background-image">Background Image</label>
-			<input bind:value={app.backgoundImage} />
-		</div>
-
 		<Controls bind:app bind:content bind:leadHeading bind:mainHeading bind:button />
 	</main>
 </div>
@@ -82,22 +76,10 @@
 	}
 
 	.app {
+		height: 100%;
+		/* overflow-y: hidden; */
 		display: grid;
 		gap: 2rem;
 		padding-block-end: 2rem; /* Due to REPL console */
 	}
-
-	.input-group {
-		display: grid;
-		gap: 0.5rem;
-
-		& input {
-			padding: 0.5rem;
-		}
-	}
-
-  /* main {
-    width: min(100% - 1.5rem, 80%);
-    margin-inline: auto;
-  } */
 </style>
