@@ -89,7 +89,7 @@
 
 <style>
 	.hero {
-		min-height: 70dvh;
+		min-height: 60dvh;
 		padding: 2rem;
 		background-size: cover;
 	}

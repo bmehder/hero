@@ -1,5 +1,6 @@
 <script>
 	import '@picocss/pico'
+  import '$lib/app.css'
 	import { backgoundImage, lorem32 } from '$lib/utils.js'
 	import Hero from '$lib/Hero.svelte'
 	import Controls from '$lib/Controls.svelte'
