@@ -7,24 +7,25 @@
 
 	let isOpen = false
 
-	const handleClick = () => isOpen = !isOpen
+	const handleClick = () => (isOpen = !isOpen)
 
 	let app = {
-    height: 100,
+		height: 100,
 		opacity: 0.5,
 		backgoundImage,
 		backgroundPositionX: 'center',
 		backgroundPositionY: 'center',
-    backgoundSize: 100,
+		backgoundSize: 100,
 		textPositionX: 'center',
 		textPositionY: 'center',
-    textShadow: 0.125,
+		textShadow: 0.125,
 		gap: 0.5,
 	}
 
 	let mainHeading = {
 		color: '#ffffff',
 		text: 'Lorem Ipsum Dolor',
+    font: 'Poppins',
 		fontSize: 4,
 		fontWeight: 600,
 		lineHeight: 1,
@@ -36,6 +37,7 @@
 	let leadHeading = {
 		color: '#ffffff',
 		text: 'Lorem Ipsum',
+    font: 'Poppins',
 		fontSize: 1.5,
 		fontWeight: 300,
 		lineHeight: 1,
@@ -47,6 +49,7 @@
 	let content = {
 		color: '#ffffff',
 		text: lorem32,
+    font: 'Poppins',
 		fontSize: 1,
 		fontWeight: 500,
 		lineHeight: 1.5,

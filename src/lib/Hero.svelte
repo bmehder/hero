@@ -6,6 +6,15 @@
 	export let button
 </script>
 
+<svelte:head>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+		rel="stylesheet"
+	/>
+</svelte:head>
+
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <section
@@ -35,6 +44,7 @@
 			class:italic={leadHeading.isItalic}
 			style="
 				color: {leadHeading.color};
+				font-family: {leadHeading.font}, sans-serif;
 				font-size: {leadHeading.fontSize}rem;
 				font-weight: {leadHeading.fontWeight};
 				line-height: {leadHeading.lineHeight};
@@ -50,6 +60,7 @@
 			class:italic={mainHeading.isItalic}
 			style="
 				color: {mainHeading.color};
+				font-family: {mainHeading.font}, sans-serif;
 				font-size: {mainHeading.fontSize}rem;
 				font-weight: {mainHeading.fontWeight};
 				line-height: {mainHeading.lineHeight};
@@ -68,6 +79,7 @@
 			class:italic={content.isItalic}
 			style="
 				color: {content.color};
+				font-family: {content.font}, sans-serif;
 				font-size: {content.fontSize}rem;
 				font-weight: {content.fontWeight};
 				line-height: {content.lineHeight};

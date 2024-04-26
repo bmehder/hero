@@ -64,6 +64,15 @@
 			<input type="text" id="lead-heading" bind:value={leadHeading.text} />
 		</div>
 
+    <div class="input-group">
+			<label for="font">Font Family</label>
+			<select id="font" bind:value={leadHeading.font}>
+				<option>Poppins</option>
+				<option>Montserrat</option>
+				<option>Oswald</option>
+			</select>
+    </div>
+
 		<div class="input-group two-col">
 			<label for="lead-heading-uppercase"> Lead Heading Uppercase? </label>
 			<input
@@ -154,6 +163,15 @@
 			<input type="text" id="main-heading" bind:value={mainHeading.text} />
 		</div>
 
+    <div class="input-group">
+			<label for="font">Font Family</label>
+			<select id="font" bind:value={mainHeading.font}>
+				<option>Poppins</option>
+				<option>Montserrat</option>
+				<option>Oswald</option>
+			</select>
+    </div>
+
 		<div class="input-group two-col">
 			<label for="main-heading-uppercase"> Main Heading Uppercase? </label><input
 				type="checkbox"
@@ -242,6 +260,15 @@
 			<label for="content">Content Text</label>
 			<textarea type="text" id="content" bind:value={content.text} rows="4"></textarea>
 		</div>
+
+    <div class="input-group">
+			<label for="font">Font Family</label>
+			<select id="font" bind:value={content.font}>
+				<option>Poppins</option>
+				<option>Montserrat</option>
+				<option>Oswald</option>
+			</select>
+    </div>
 
 		<div class="input-group two-col">
 			<label for="content-uppercase"> Content Uppercase? </label><input
@@ -441,6 +468,7 @@
 	<!-- Text -->
 	<details>
 		<summary>Text</summary>
+
 		<div class="input-group">
 			<label for="text-position-x">Text Position X</label>
 			<select id="text-position-x" bind:value={app.textPositionX}>
@@ -478,13 +506,11 @@
 		position: absolute;
 		display: grid;
 		gap: 2rem;
-    top: 1.5rem;
 		right: -100%;
 		z-index: 1;
 		padding: 2rem;
 		overflow-y: scroll;
 		background-color: var(--pico-background-color);
-		border-top-left-radius: 0.5rem;
 		border-bottom-left-radius: 0.5rem;
 		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 		transition: right 300ms ease-in-out;
