@@ -4,11 +4,12 @@
 	export let leadHeading
 	export let content
 	export let button
+	export let isOpen
 </script>
 
-<div class="controls">
+<div class="controls" class:isOpen>
 	<div class="input-group">
-		<label for="background-image">Background Image</label>
+		<label for="background-image">Background Image URL</label>
 		<input bind:value={app.backgoundImage} />
 	</div>
 
@@ -33,15 +34,31 @@
 	</div>
 
 	<div class="input-group">
+		<label for="min-height">Minimum Height</label>
+		<input type="range" name="min-height" min="0" max="100" bind:value={app.height} />
+	</div>
+
+	<div class="input-group">
+		<label for="background-size">Background Size</label>
+		<input
+			type="range"
+			name="background-size"
+			min="100"
+			max="400"
+			bind:value={app.backgoundSize}
+		/>
+	</div>
+
+	<div class="input-group">
 		<label for="background-position">Background Position</label>
 		<select id="background-position" bind:value={app.backgroundPositionX}>
-			<option>center</option>
 			<option>left</option>
+			<option>center</option>
 			<option>right</option>
 		</select>
 		<select id="background-position" bind:value={app.backgroundPositionY}>
-			<option>center</option>
 			<option>top</option>
+			<option>center</option>
 			<option>bottom</option>
 		</select>
 	</div>
@@ -61,6 +78,11 @@
 	</div>
 
 	<div class="input-group">
+		<label for="text-shadow">Text Shadow: {app.textShadow}rem</label>
+		<input type="range" id="text-shadow" bind:value={app.textShadow} min="0" max="1" step="0.005" />
+	</div>
+	
+  <div class="input-group">
 		<label for="gap">Spacing: {app.gap}rem</label>
 		<input type="range" id="gap" bind:value={app.gap} min="0" max="5" step="0.5" />
 	</div>
@@ -101,6 +123,11 @@
 	</div>
 
 	<div class="input-group two-col">
+		<label for="button-uppercase"> Button Uppercase? </label>
+		<input type="checkbox" id="button-uppercase" bind:checked={button.isUppercase} />
+	</div>
+
+	<div class="input-group two-col">
 		<label for="mainHeading-italic"> Main Heading Italic? </label>
 		<input type="checkbox" id="main-heading-italic" bind:checked={mainHeading.isItalic} />
 	</div>
@@ -131,7 +158,7 @@
 
 	<div class="input-group">
 		<label for="main-heading-line-height">
-			Main Heading Line Height: {mainHeading.lineHeight}em
+			Main Heading Line Height: {mainHeading.lineHeight}
 		</label>
 		<input
 			type="range"
@@ -186,7 +213,7 @@
 
 	<div class="input-group">
 		<label for="lead-heading-line-height">
-			Lead Heading Line Height: {leadHeading.lineHeight}em
+			Lead Heading Line Height: {leadHeading.lineHeight}
 		</label>
 		<input
 			type="range"
@@ -241,7 +268,7 @@
 
 	<div class="input-group">
 		<label for="content-line-height">
-			Content Line Height: {content.lineHeight}em
+			Content Line Height: {content.lineHeight}
 		</label>
 		<input
 			type="range"
@@ -296,7 +323,7 @@
 
 	<div class="input-group">
 		<label for="button-line-height">
-			Button Line Height: {button.lineHeight}em
+			Button Line Height: {button.lineHeight}
 		</label>
 		<input
 			type="range"
@@ -377,10 +404,21 @@
 
 <style>
 	.controls {
-		height: 400px;
+		width: 24rem;
+		max-height: 100dvh;
+		position: absolute;
 		display: grid;
 		gap: 2rem;
+		right: -24rem;
+		z-index: 1;
+		padding: 2rem;
 		overflow-y: scroll;
+		background-color: var(--pico-background-color);
+		transition: right 300ms ease-in-out;
+	}
+
+	.isOpen {
+		right: 0;
 	}
 
 	.two-col {

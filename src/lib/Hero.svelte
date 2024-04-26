@@ -6,16 +6,22 @@
 	export let button
 </script>
 
+<!-- svelte-ignore a11y-no-static-element-interactions -->
+<!-- svelte-ignore a11y-click-events-have-key-events -->
 <section
+	on:click
 	class="hero"
 	style="
+		min-height: {app.height}dvh;
 		background-image: url({app.backgoundImage});
 		background-position:
 			{app.backgroundPositionX} {app.backgroundPositionY};
+    background-size: {app.backgoundSize}%;
 		box-shadow:
 		 inset 0 0 0 1000px rgba(0, 0, 0, {app.opacity});
 		color: {content.color};
-	">
+	"
+>
 	<div
 		class="hero-items"
 		style="
@@ -34,6 +40,7 @@
 				font-weight: {leadHeading.fontWeight};
 				line-height: {leadHeading.lineHeight};
 				letter-spacing: {leadHeading.letterSpacing}px;
+				text-shadow: 0 0 {app.textShadow}rem black;
 			"
 		>
 			{leadHeading.text}
@@ -48,6 +55,7 @@
 				font-weight: {mainHeading.fontWeight};
 				line-height: {mainHeading.lineHeight};
 				letter-spacing: {mainHeading.letterSpacing}px;
+				text-shadow: 0 0 {app.textShadow}rem black;
 			"
 		>
 			{mainHeading.text}
@@ -65,12 +73,14 @@
 				font-weight: {content.fontWeight};
 				line-height: {content.lineHeight};
 				letter-spacing: {content.letterSpacing}px;
+				text-shadow: 0 0 {app.textShadow}rem black;
 			"
 		>
 			{content.text}
 		</div>
-		
+
 		<button
+			class:isUppercase={button.isUppercase}
 			style="
 				background-color: {button.backgroundColor};
 				color: {button.color};
@@ -89,30 +99,32 @@
 
 <style>
 	.hero {
-		min-height: 70dvh;
 		padding: 2rem;
 		background-size: cover;
 	}
 
 	.hero-items {
-    max-width: 48rem;
+		max-width: 48rem;
 		min-height: 100%;
 		display: grid;
-    margin-inline: auto;
+		margin-inline: auto;
 	}
 
-	.main-heading, .lead-heading {
+	.main-heading,
+	.lead-heading {
 		line-height: 1.1;
 	}
-	
-	.main-heading, .lead-heading, .content {
+
+	/* .main-heading,
+	.lead-heading,
+	.content {
 		text-shadow: 0 0 0.125rem black;
-	}
+	} */
 
 	.content {
 		font-weight: 600;
 	}
-	
+
 	button {
 		margin-block-start: 1rem;
 		font: inherit;
@@ -120,17 +132,17 @@
 	}
 
 	.isUppercase {
-		text-transform: uppercase;	
+		text-transform: uppercase;
 	}
 
 	.text-align-left {
 		text-align: left;
 	}
-	
+
 	.text-align-center {
 		text-align: center;
 	}
-	
+
 	.text-align-right {
 		text-align: right;
 	}

@@ -1,17 +1,24 @@
 <script>
 	import '@picocss/pico'
-  import '$lib/app.css'
+	import '$lib/app.css'
 	import { backgoundImage, lorem32 } from '$lib/utils.js'
 	import Hero from '$lib/Hero.svelte'
 	import Controls from '$lib/Controls.svelte'
 
+	let isOpen = false
+
+	const handleClick = () => isOpen = !isOpen
+
 	let app = {
+    height: 60,
 		opacity: 0.5,
 		backgoundImage,
 		backgroundPositionX: 'center',
 		backgroundPositionY: 'center',
+    backgoundSize: '100',
 		textPositionX: 'center',
 		textPositionY: 'center',
+    textShadow: 0.125,
 		gap: 1,
 	}
 
@@ -51,7 +58,7 @@
 	let button = {
 		text: 'Apply Now',
 		backgroundColor: '#ffffff',
-		color: '#333333',
+		color: '#323232',
 		paddingBlock: 0.5,
 		paddingInline: 1,
 		fontSize: 1,
@@ -63,10 +70,23 @@
 </script>
 
 <div class="app">
-	<Hero bind:app bind:content bind:leadHeading bind:mainHeading bind:button />
-	<main class="container">
-		<Controls bind:app bind:content bind:leadHeading bind:mainHeading bind:button />
-	</main>
+	<Hero
+		bind:app
+		bind:content
+		bind:leadHeading
+		bind:mainHeading
+		bind:button
+		on:click={handleClick}
+	/>
+
+	<Controls
+		bind:app
+		bind:content
+		bind:leadHeading
+		bind:mainHeading
+		bind:button
+		{isOpen}
+	/>
 </div>
 
 <style>
@@ -77,8 +97,6 @@
 	}
 
 	.app {
-		height: 100%;
-		/* overflow-y: hidden; */
 		display: grid;
 		gap: 2rem;
 		padding-block-end: 2rem; /* Due to REPL console */
