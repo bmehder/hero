@@ -40,17 +40,6 @@
 		</div>
 
 		<div class="input-group">
-			<label for="background-size">Background Size</label>
-			<input
-				type="range"
-				id="background-size"
-				min="100"
-				max="400"
-				bind:value={app.backgoundSize}
-			/>
-		</div>
-
-		<div class="input-group">
 			<label for="background-position-x">Background Position X</label>
 			<select id="background-position-x" bind:value={app.backgroundPositionX}>
 				<option>left</option>
@@ -489,11 +478,13 @@
 		position: absolute;
 		display: grid;
 		gap: 2rem;
+    top: 1.5rem;
 		right: -100%;
 		z-index: 1;
 		padding: 2rem;
 		overflow-y: scroll;
 		background-color: var(--pico-background-color);
+		border-top-left-radius: 0.5rem;
 		border-bottom-left-radius: 0.5rem;
 		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 		transition: right 300ms ease-in-out;

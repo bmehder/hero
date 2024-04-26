@@ -109,6 +109,10 @@
 		margin-inline: auto;
 	}
 
+	h1 {
+		text-align: center;
+	}
+
 	button {
 		margin-block-start: 1rem;
 		font: inherit;
