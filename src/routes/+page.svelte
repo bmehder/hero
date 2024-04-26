@@ -10,12 +10,12 @@
 	const handleClick = () => isOpen = !isOpen
 
 	let app = {
-    height: 60,
+    height: 100,
 		opacity: 0.5,
 		backgoundImage,
 		backgroundPositionX: 'center',
 		backgroundPositionY: 'center',
-    backgoundSize: '100',
+    backgoundSize: 100,
 		textPositionX: 'center',
 		textPositionY: 'center',
     textShadow: 0.125,
@@ -90,15 +90,8 @@
 </div>
 
 <style>
-	:global(*) {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-	}
-
 	.app {
 		display: grid;
 		gap: 2rem;
-		padding-block-end: 2rem; /* Due to REPL console */
 	}
 </style>

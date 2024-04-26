@@ -110,21 +110,6 @@
 		margin-inline: auto;
 	}
 
-	.main-heading,
-	.lead-heading {
-		line-height: 1.1;
-	}
-
-	/* .main-heading,
-	.lead-heading,
-	.content {
-		text-shadow: 0 0 0.125rem black;
-	} */
-
-	.content {
-		font-weight: 600;
-	}
-
 	button {
 		margin-block-start: 1rem;
 		font: inherit;
