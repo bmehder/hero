@@ -489,7 +489,7 @@
 		position: absolute;
 		display: grid;
 		gap: 2rem;
-		right: -24rem;
+		right: -100%;
 		z-index: 1;
 		padding: 2rem;
 		overflow-y: scroll;
