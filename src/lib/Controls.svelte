@@ -10,7 +10,7 @@
 <div class="controls" class:isOpen>
 	<div class="input-group">
 		<label for="background-image">Background Image URL</label>
-		<input bind:value={app.backgoundImage} />
+		<input id="background-image" bind:value={app.backgoundImage} />
 	</div>
 
 	<div class="input-group">
@@ -35,14 +35,14 @@
 
 	<div class="input-group">
 		<label for="min-height">Minimum Height</label>
-		<input type="range" name="min-height" min="0" max="100" bind:value={app.height} />
+		<input type="range" id="min-height" min="0" max="100" bind:value={app.height} />
 	</div>
 
 	<div class="input-group">
 		<label for="background-size">Background Size</label>
 		<input
 			type="range"
-			name="background-size"
+			id="background-size"
 			min="100"
 			max="400"
 			bind:value={app.backgoundSize}
@@ -50,13 +50,15 @@
 	</div>
 
 	<div class="input-group">
-		<label for="background-position">Background Position</label>
-		<select id="background-position" bind:value={app.backgroundPositionX}>
+		<label for="background-position-x">Background Position X</label>
+		<select id="background-position-x" bind:value={app.backgroundPositionX}>
 			<option>left</option>
 			<option>center</option>
 			<option>right</option>
 		</select>
-		<select id="background-position" bind:value={app.backgroundPositionY}>
+    
+    <label for="background-position-y">Background Position Y</label>
+		<select id="background-position-y" bind:value={app.backgroundPositionY}>
 			<option>top</option>
 			<option>center</option>
 			<option>bottom</option>
@@ -64,13 +66,15 @@
 	</div>
 
 	<div class="input-group">
-		<label for="text-position">Text Position</label>
-		<select id="text-position" bind:value={app.textPositionX}>
+		<label for="text-position-x">Text Position X</label>
+		<select id="text-position-x" bind:value={app.textPositionX}>
 			<option value="start">left</option>
 			<option value="center">center</option>
 			<option value="end">right</option>
 		</select>
-		<select id="text-position" bind:value={app.textPositionY}>
+    
+    <label for="text-position-y">Text Position Y</label>
+		<select id="text-position-y" bind:value={app.textPositionY}>
 			<option value="start">top</option>
 			<option value="center">center</option>
 			<option value="end">bottom</option>
@@ -84,7 +88,7 @@
 	
   <div class="input-group">
 		<label for="gap">Spacing: {app.gap}rem</label>
-		<input type="range" id="gap" bind:value={app.gap} min="0" max="5" step="0.5" />
+		<input type="range" id="gap" bind:value={app.gap} min="0" max="5" step="0.25" />
 	</div>
 
 	<div class="input-group">
@@ -322,6 +326,34 @@
 	</div>
 
 	<div class="input-group">
+		<label for="button-padding-block">
+			Button Padding Block: {button.paddingBlock}rem
+		</label>
+		<input
+			type="range"
+			id="button-padding-block"
+			bind:value={button.paddingBlock}
+			min="0"
+			max="5"
+			step="0.5"
+		/>
+	</div>
+	
+  <div class="input-group">
+		<label for="button-padding-inline">
+			Button Padding Inline: {button.paddingInline}rem
+		</label>
+		<input
+			type="range"
+			id="button-padding-inline"
+			bind:value={button.paddingInline}
+			min="0"
+			max="5"
+			step="0.5"
+		/>
+	</div>
+	
+  <div class="input-group">
 		<label for="button-line-height">
 			Button Line Height: {button.lineHeight}
 		</label>
