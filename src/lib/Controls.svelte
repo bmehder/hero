@@ -386,6 +386,15 @@
 			<input type="text" id="button-text" bind:value={button.text} />
 		</div>
 
+    <div class="input-group">
+			<label for="font">Font Family</label>
+			<select id="font" bind:value={button.font}>
+				<option>Poppins</option>
+				<option>Montserrat</option>
+				<option>Oswald</option>
+			</select>
+    </div>
+
 		<div class="input-group two-col">
 			<label for="button-uppercase"> Button Uppercase? </label>
 			<input type="checkbox" id="button-uppercase" bind:checked={button.isUppercase} />

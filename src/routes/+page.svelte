@@ -64,6 +64,7 @@
 		color: '#323232',
 		paddingBlock: 0.5,
 		paddingInline: 1,
+    font: 'Poppins',
 		fontSize: 1,
 		fontWeight: 500,
 		lineHeight: 1.5,

@@ -97,6 +97,7 @@
 				color: {button.color};
 				padding-block: {button.paddingBlock}rem;
 				padding-inline: {button.paddingInline}rem;
+				font-family: {button.font}, sans-serif;
 				font-size: {button.fontSize}rem;
 				font-weight: {button.fontWeight};
 				line-height: {button.lineHeight};
