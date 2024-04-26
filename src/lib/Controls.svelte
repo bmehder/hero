@@ -8,11 +8,11 @@
 </script>
 
 <div class="controls" class:isOpen>
-  <!-- Background -->
+	<!-- Background -->
 	<details>
 		<summary>Background</summary>
 
-    <div class="input-group">
+		<div class="input-group">
 			<label for="background-image">Background Image URL</label>
 			<input id="background-image" bind:value={app.backgoundImage} />
 		</div>
@@ -66,33 +66,31 @@
 			</select>
 		</div>
 	</details>
-  
-  <!-- Lead -->
+
+	<!-- Lead -->
 	<details>
 		<summary>Lead</summary>
 		<div class="input-group">
-			<label for="lead-heading">Lead Heading</label>
+			<label for="lead-heading">Lead Text</label>
 			<input type="text" id="lead-heading" bind:value={leadHeading.text} />
 		</div>
 
 		<div class="input-group two-col">
-			<label for="lead-heading-uppercase">
-				<input
-					type="checkbox"
-					id="lead-heading-uppercase"
-					bind:checked={leadHeading.isUppercase}
-				/>Lead Heading Uppercase?
-			</label>
+			<label for="lead-heading-uppercase"> Lead Heading Uppercase? </label>
+			<input
+				type="checkbox"
+				id="lead-heading-uppercase"
+				bind:checked={leadHeading.isUppercase}
+			/>
 		</div>
 
 		<div class="input-group two-col">
-			<label for="leadHeading-italic">
-				<input
-					type="checkbox"
-					id="lead-heading-italic"
-					bind:checked={leadHeading.isItalic}
-				/>Lead Heading Italic?
-			</label>
+			<label for="lead-Heading-italic"> Lead Heading Italic? </label>
+			<input
+				type="checkbox"
+				id="lead-heading-italic"
+				bind:checked={leadHeading.isItalic}
+			/>
 		</div>
 
 		<div class="input-group">
@@ -158,7 +156,7 @@
 		</div>
 	</details>
 
-  <!-- Main -->
+	<!-- Main -->
 	<details>
 		<summary>Main</summary>
 
@@ -167,24 +165,21 @@
 			<input type="text" id="main-heading" bind:value={mainHeading.text} />
 		</div>
 
-    <div class="input-group two-col">
-			<label for="main-heading-uppercase">
-				<input
-					type="checkbox"
-					id="main-heading-uppercase"
-					bind:checked={mainHeading.isUppercase}
-				/>Main Heading Uppercase?
-			</label>
+		<div class="input-group two-col">
+			<label for="main-heading-uppercase"> Main Heading Uppercase? </label><input
+				type="checkbox"
+				id="main-heading-uppercase"
+				bind:checked={mainHeading.isUppercase}
+			/>
 		</div>
 
 		<div class="input-group two-col">
-			<label for="mainHeading-italic">
-				<input
-					type="checkbox"
-					id="main-heading-italic"
-					bind:checked={mainHeading.isItalic}
-				/>Main Heading Italic?
-			</label>
+			<label for="mainHeading-italic"> Main Heading Italic? </label>
+			<input
+				type="checkbox"
+				id="main-heading-italic"
+				bind:checked={mainHeading.isItalic}
+			/>
 		</div>
 
 		<div class="input-group">
@@ -250,7 +245,7 @@
 		</div>
 	</details>
 
-  <!-- Content -->
+	<!-- Content -->
 	<details>
 		<summary>Content</summary>
 
@@ -259,27 +254,23 @@
 			<textarea type="text" id="content" bind:value={content.text} rows="4"></textarea>
 		</div>
 
-    <div class="input-group two-col">
-			<label for="content-uppercase">
-				<input
-					type="checkbox"
-					id="content-uppercase"
-					bind:checked={content.isUppercase}
-				/>Content Uppercase?
-			</label>
+		<div class="input-group two-col">
+			<label for="content-uppercase"> Content Uppercase? </label><input
+				type="checkbox"
+				id="content-uppercase"
+				bind:checked={content.isUppercase}
+			/>
 		</div>
 
 		<div class="input-group two-col">
-			<label for="content-italic">
-				<input
-					type="checkbox"
-					id="content-italic"
-					bind:checked={content.isItalic}
-				/>Content Italic?
-			</label>
+			<label for="content-italic"> Content Italic? </label><input
+				type="checkbox"
+				id="content-italic"
+				bind:checked={content.isItalic}
+			/>
 		</div>
 
-    <div class="input-group">
+		<div class="input-group">
 			<label for="content-font-size">
 				Content Font Size: {content.fontSize}rem
 			</label>
@@ -342,11 +333,11 @@
 		</div>
 	</details>
 
-  <!-- Button -->
+	<!-- Button -->
 	<details>
 		<summary>Button</summary>
 
-    <div class="input-group">
+		<div class="input-group">
 			<label for="button-padding-block">
 				Button Padding Block: {button.paddingBlock}rem
 			</label>
@@ -381,7 +372,7 @@
 
 		<div class="input-group two-col">
 			<label for="button-uppercase"> Button Uppercase? </label>
-      <input type="checkbox" id="button-uppercase" bind:checked={button.isUppercase} />
+			<input type="checkbox" id="button-uppercase" bind:checked={button.isUppercase} />
 		</div>
 
 		<div class="input-group">
@@ -458,7 +449,7 @@
 		</div>
 	</details>
 
-  <!-- Text -->
+	<!-- Text -->
 	<details>
 		<summary>Text</summary>
 		<div class="input-group">
@@ -503,6 +494,8 @@
 		padding: 2rem;
 		overflow-y: scroll;
 		background-color: var(--pico-background-color);
+		border-bottom-left-radius: 0.5rem;
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 		transition: right 300ms ease-in-out;
 	}
 

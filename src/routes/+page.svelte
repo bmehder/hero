@@ -19,13 +19,13 @@
 		textPositionX: 'center',
 		textPositionY: 'center',
     textShadow: 0.125,
-		gap: 1,
+		gap: 0.5,
 	}
 
 	let mainHeading = {
 		color: '#ffffff',
 		text: 'Lorem Ipsum Dolor',
-		fontSize: 2,
+		fontSize: 4,
 		fontWeight: 600,
 		lineHeight: 1,
 		letterSpacing: 0,
@@ -36,11 +36,11 @@
 	let leadHeading = {
 		color: '#ffffff',
 		text: 'Lorem Ipsum',
-		fontSize: 2,
-		fontWeight: 600,
-		lineHeight: 1.5,
-		letterSpacing: 0,
-		isUppercase: false,
+		fontSize: 1.5,
+		fontWeight: 300,
+		lineHeight: 1,
+		letterSpacing: 3,
+		isUppercase: true,
 		isItalic: false,
 	}
 
