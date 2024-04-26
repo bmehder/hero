@@ -1,4 +1,6 @@
 <script>
+	import Copied from '$lib/Copied.svelte'
+
 	export let app
 	export let mainHeading
 	export let leadHeading
@@ -6,12 +8,24 @@
 	export let button
 	export let isOpen
 
-	const copyHero = () =>
+	let isShowIcon = false
+
+	const copyHero = () => {
 		navigator.clipboard.writeText(document.querySelector('.hero').outerHTML)
+
+		isShowIcon = true
+
+		setTimeout(() => (isShowIcon = false), 2000)
+	}
 </script>
 
 <div class="controls" class:isOpen>
-	<button class="secondary" on:click={copyHero}>Copy</button>
+	{#if isShowIcon}
+		<Copied />
+	{/if}
+
+	<button class="secondary" on:click={copyHero}>Copy HTML</button>
+
 	<!-- Background -->
 	<details>
 		<summary>Background</summary>
