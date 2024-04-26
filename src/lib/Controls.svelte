@@ -5,9 +5,13 @@
 	export let content
 	export let button
 	export let isOpen
+
+	const copyHero = () =>
+		navigator.clipboard.writeText(document.querySelector('.hero').outerHTML)
 </script>
 
 <div class="controls" class:isOpen>
+	<button class="secondary" on:click={copyHero}>Copy</button>
 	<!-- Background -->
 	<details>
 		<summary>Background</summary>
@@ -64,14 +68,14 @@
 			<input type="text" id="lead-heading" bind:value={leadHeading.text} />
 		</div>
 
-    <div class="input-group">
+		<div class="input-group">
 			<label for="font">Font Family</label>
 			<select id="font" bind:value={leadHeading.font}>
 				<option>Poppins</option>
 				<option>Montserrat</option>
 				<option>Oswald</option>
 			</select>
-    </div>
+		</div>
 
 		<div class="input-group two-col">
 			<label for="lead-heading-uppercase"> Lead Heading Uppercase? </label>
@@ -163,14 +167,14 @@
 			<input type="text" id="main-heading" bind:value={mainHeading.text} />
 		</div>
 
-    <div class="input-group">
+		<div class="input-group">
 			<label for="font">Font Family</label>
 			<select id="font" bind:value={mainHeading.font}>
 				<option>Poppins</option>
 				<option>Montserrat</option>
 				<option>Oswald</option>
 			</select>
-    </div>
+		</div>
 
 		<div class="input-group two-col">
 			<label for="main-heading-uppercase"> Main Heading Uppercase? </label><input
@@ -261,14 +265,14 @@
 			<textarea type="text" id="content" bind:value={content.text} rows="4"></textarea>
 		</div>
 
-    <div class="input-group">
+		<div class="input-group">
 			<label for="font">Font Family</label>
 			<select id="font" bind:value={content.font}>
 				<option>Poppins</option>
 				<option>Montserrat</option>
 				<option>Oswald</option>
 			</select>
-    </div>
+		</div>
 
 		<div class="input-group two-col">
 			<label for="content-uppercase"> Content Uppercase? </label><input
@@ -386,14 +390,14 @@
 			<input type="text" id="button-text" bind:value={button.text} />
 		</div>
 
-    <div class="input-group">
+		<div class="input-group">
 			<label for="font">Font Family</label>
 			<select id="font" bind:value={button.font}>
 				<option>Poppins</option>
 				<option>Montserrat</option>
 				<option>Oswald</option>
 			</select>
-    </div>
+		</div>
 
 		<div class="input-group two-col">
 			<label for="button-uppercase"> Button Uppercase? </label>

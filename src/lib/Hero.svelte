@@ -22,6 +22,8 @@
 	class="hero"
 	style="
 		min-height: {app.height}dvh;
+		padding: 2rem;
+		background-size: cover;
 		background-image: url({app.backgoundImage});
 		background-position:
 			{app.backgroundPositionX} {app.backgroundPositionY};
@@ -33,9 +35,13 @@
 	<div
 		class="hero-items"
 		style="
+			max-width: 48rem;
+			min-height: 100%;
+			display: grid;
 			justify-items: {app.textPositionX};
 			align-content: {app.textPositionY};
 			gap: {app.gap}rem;
+			margin-inline: auto;
 		"
 	>
 		<h2
@@ -66,6 +72,7 @@
 				line-height: {mainHeading.lineHeight};
 				letter-spacing: {mainHeading.letterSpacing}px;
 				text-shadow: 0 0 {app.textShadow}rem black;
+				text-align: center;
 			"
 		>
 			{mainHeading.text}
@@ -93,15 +100,17 @@
 		<button
 			class:isUppercase={button.isUppercase}
 			style="
-				background-color: {button.backgroundColor};
-				color: {button.color};
+				margin-block-start: 1rem;
 				padding-block: {button.paddingBlock}rem;
 				padding-inline: {button.paddingInline}rem;
+				background-color: {button.backgroundColor};
+				color: {button.color};
 				font-family: {button.font}, sans-serif;
 				font-size: {button.fontSize}rem;
 				font-weight: {button.fontWeight};
 				line-height: {button.lineHeight};
 				letter-spacing: {button.letterSpacing}px;
+				border: none;
 			"
 		>
 			{button.text}
@@ -110,28 +119,6 @@
 </section>
 
 <style>
-	.hero {
-		padding: 2rem;
-		background-size: cover;
-	}
-
-	.hero-items {
-		max-width: 48rem;
-		min-height: 100%;
-		display: grid;
-		margin-inline: auto;
-	}
-
-	h1 {
-		text-align: center;
-	}
-
-	button {
-		margin-block-start: 1rem;
-		font: inherit;
-		border: none;
-	}
-
 	.isUppercase {
 		text-transform: uppercase;
 	}

@@ -25,7 +25,7 @@
 	let mainHeading = {
 		color: '#ffffff',
 		text: 'Lorem Ipsum Dolor',
-    font: 'Poppins',
+		font: 'Poppins',
 		fontSize: 4,
 		fontWeight: 600,
 		lineHeight: 1,
@@ -37,7 +37,7 @@
 	let leadHeading = {
 		color: '#ffffff',
 		text: 'Lorem Ipsum',
-    font: 'Poppins',
+		font: 'Poppins',
 		fontSize: 1.5,
 		fontWeight: 300,
 		lineHeight: 1,
@@ -49,7 +49,7 @@
 	let content = {
 		color: '#ffffff',
 		text: lorem32,
-    font: 'Poppins',
+		font: 'Poppins',
 		fontSize: 1,
 		fontWeight: 500,
 		lineHeight: 1.5,
@@ -64,7 +64,7 @@
 		color: '#323232',
 		paddingBlock: 0.5,
 		paddingInline: 1,
-    font: 'Poppins',
+		font: 'Poppins',
 		fontSize: 1,
 		fontWeight: 500,
 		lineHeight: 1.5,
