@@ -78,6 +78,7 @@
 
 	let button = {
 		text: 'Apply Now',
+    href: 'https://example.com/',
 		backgroundColor: '#ffffff',
     isBackgroundTransparent: false,
 		color: '#323232',
@@ -95,7 +96,8 @@
     borderColor: '#ffffff',
     borderRadius: 0,
 		isUppercase: false,
-    isShow: true
+    isShow: true,
+    isOpenBlank: false,
 	}
 </script>
 

@@ -144,7 +144,8 @@
 				outline-color: {button.borderColor};
 				outline-radius: {button.borderRadius}px;
 			"
-			href
+			href={button.href}
+			target={button.isOpenBlank ? '_blank' : '_self'}
 		>
 			{button.text}
 		</a>

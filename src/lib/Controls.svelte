@@ -102,7 +102,7 @@
 	<details>
 		<summary>Lead</summary>
 
-		<div class="input-group two-col">
+		<div class="input-group">
 			<label for="lead-heading-show"> Show Lead Heading? </label><input
 				type="checkbox"
 				id="lead-heading-show"
@@ -161,7 +161,7 @@
 			/>
 		</div>
 
-		<div class="input-group two-col">
+		<div class="input-group">
 			<label for="lead-Heading-italic"> Lead Heading Italic? </label>
 			<input
 				type="checkbox"
@@ -256,7 +256,7 @@
 			/>
 		</div>
 
-		<div class="input-group two-col">
+		<div class="input-group">
 			<label for="lead-heading-background-transparent">
 				Lead Heading Background Transparent?
 			</label><input
@@ -271,7 +271,7 @@
 	<details>
 		<summary>Main</summary>
 
-		<div class="input-group two-col">
+		<div class="input-group">
 			<label for="main-heading-show"> Show Main Heading? </label><input
 				type="checkbox"
 				id="main-heading-show"
@@ -321,7 +321,7 @@
 			</select>
 		</div>
 
-		<div class="input-group two-col">
+		<div class="input-group">
 			<label for="main-heading-uppercase"> Main Heading Uppercase? </label><input
 				type="checkbox"
 				id="main-heading-uppercase"
@@ -329,7 +329,7 @@
 			/>
 		</div>
 
-		<div class="input-group two-col">
+		<div class="input-group">
 			<label for="mainHeading-italic"> Main Heading Italic? </label>
 			<input
 				type="checkbox"
@@ -424,7 +424,7 @@
 			/>
 		</div>
 
-		<div class="input-group two-col">
+		<div class="input-group">
 			<label for="main-heading-background-transparent">
 				Main Heading Background Transparent?
 			</label><input
@@ -439,7 +439,7 @@
 	<details>
 		<summary>Content</summary>
 
-		<div class="input-group two-col">
+		<div class="input-group">
 			<label for="content-show"> Show Content? </label><input
 				type="checkbox"
 				id="content-show"
@@ -489,7 +489,7 @@
 			</select>
 		</div>
 
-		<div class="input-group two-col">
+		<div class="input-group">
 			<label for="content-uppercase"> Content Uppercase? </label><input
 				type="checkbox"
 				id="content-uppercase"
@@ -497,7 +497,7 @@
 			/>
 		</div>
 
-		<div class="input-group two-col">
+		<div class="input-group">
 			<label for="content-italic"> Content Italic? </label><input
 				type="checkbox"
 				id="content-italic"
@@ -591,7 +591,7 @@
 			/>
 		</div>
 
-		<div class="input-group two-col">
+		<div class="input-group">
 			<label for="content-background-transparent">
 				Content Background Transparent?
 			</label><input
@@ -606,11 +606,24 @@
 	<details>
 		<summary>Button</summary>
 
-		<div class="input-group two-col">
+		<div class="input-group">
 			<label for="button-show"> Show Button? </label><input
 				type="checkbox"
 				id="button-show"
 				bind:checked={button.isShow}
+			/>
+		</div>
+
+		<div class="input-group">
+			<label for="button-href">Button URL</label>
+			<input id="button-href" bind:value={button.href} />
+		</div>
+
+		<div class="input-group">
+			<label for="button-new-window"> Open in New Window? </label><input
+				type="checkbox"
+				id="button-new-window"
+				bind:checked={button.isOpenBlank}
 			/>
 		</div>
 
@@ -698,7 +711,7 @@
 			</select>
 		</div>
 
-		<div class="input-group two-col">
+		<div class="input-group">
 			<label for="button-uppercase"> Button Uppercase? </label>
 			<input type="checkbox" id="button-uppercase" bind:checked={button.isUppercase} />
 		</div>
@@ -813,7 +826,7 @@
 			<input type="color" id="button-color" bind:value={button.color} />
 		</div>
 
-		<div class="input-group two-col">
+		<div class="input-group">
 			<label for="button-background-transparent">
 				Button Background Transparent?
 			</label><input
@@ -886,10 +899,6 @@
 
 	.isOpen {
 		right: 0;
-	}
-
-	.two-col {
-		grid-template-columns: repeat(2, 1fr);
 	}
 
 	input:not([type='color']),
