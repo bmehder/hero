@@ -20,6 +20,7 @@
 <section
 	on:click
 	class="hero"
+	class:isShowOutline={app.isShowOutline}
 	style="
 		min-height: {app.height}dvh;
 		padding: 2rem;
@@ -162,6 +163,10 @@
 </section>
 
 <style>
+	.isShowOutline * {
+    outline: 1px solid lime;
+  }
+
 	.main-heading, .lead-heading, .content, .button {
 		display: none;
 	}

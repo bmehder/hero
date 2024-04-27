@@ -20,6 +20,7 @@
 		textPositionY: 'center',
 		textShadow: 0.125,
 		gap: 0.5,
+    isShowOutline: false,
 	}
 
 	let mainHeading = {

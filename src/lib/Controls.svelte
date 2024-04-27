@@ -50,6 +50,14 @@
 		{/if}
 	</button>
 
+	<div class="input-group">
+		<label for="show-outline"> Show Outline (dev)? </label><input
+			type="checkbox"
+			id="show-outline"
+			bind:checked={app.isShowOutline}
+		/>
+	</div>
+
 	<!-- Background -->
 	<details>
 		<summary>Background</summary>
@@ -123,7 +131,7 @@
 				step="0.5"
 			/>
 		</div>
-		
+
 		<div class="input-group">
 			<label for="lead-heading-margin-block-end">
 				Lead Heading Margin Block End: {leadHeading.marginBlockEnd}rem
@@ -137,7 +145,7 @@
 				step="0.5"
 			/>
 		</div>
-		
+
 		<div class="input-group">
 			<label for="lead-heading-margin-inline">
 				Lead Heading Margin Inline: {leadHeading.marginInline}rem
@@ -334,7 +342,7 @@
 				step="0.5"
 			/>
 		</div>
-		
+
 		<div class="input-group">
 			<label for="main-heading-margin-block-end">
 				Main Heading Margin Block End: {mainHeading.marginBlockEnd}rem
@@ -348,7 +356,7 @@
 				step="0.5"
 			/>
 		</div>
-		
+
 		<div class="input-group">
 			<label for="main-heading-margin-inline">
 				Main Heading Margin Inline: {mainHeading.marginInline}rem
@@ -544,7 +552,7 @@
 				step="0.5"
 			/>
 		</div>
-		
+
 		<div class="input-group">
 			<label for="content-margin-block-end">
 				Content Margin Block End: {content.marginBlockEnd}rem
@@ -558,7 +566,7 @@
 				step="0.5"
 			/>
 		</div>
-		
+
 		<div class="input-group">
 			<label for="content-margin-inline">
 				Content Margin Inline: {content.marginInline}rem
@@ -766,7 +774,7 @@
 				step="0.5"
 			/>
 		</div>
-		
+
 		<div class="input-group">
 			<label for="button-margin-block-end">
 				Button Margin Block End: {button.marginBlockEnd}rem
@@ -780,7 +788,7 @@
 				step="0.5"
 			/>
 		</div>
-		
+
 		<div class="input-group">
 			<label for="button-margin-inline">
 				Button Margin Inline: {button.marginInline}rem
@@ -794,7 +802,7 @@
 				step="0.5"
 			/>
 		</div>
-		
+
 		<div class="input-group">
 			<label for="button-padding-block">
 				Button Padding Block: {button.paddingBlock}rem
@@ -896,7 +904,7 @@
 				max="5"
 			/>
 		</div>
-	
+
 		<div class="input-group">
 			<label for="button-border-width">
 				Button Border Width: {button.borderWidth}px
@@ -914,13 +922,9 @@
 			<label for="button-border-color">
 				Button Border Color: {button.borderColor}
 			</label>
-			<input
-				type="color"
-				id="button-border-color"
-				bind:value={button.borderColor}
-			/>
+			<input type="color" id="button-border-color" bind:value={button.borderColor} />
 		</div>
-		
+
 		<div class="input-group">
 			<label for="button-border-radius">
 				Button Border Radius: {button.borderRadius}px
