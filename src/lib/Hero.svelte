@@ -54,6 +54,9 @@
 				? '#ffffff00'
 				: leadHeading.backgroundColor};
 				color: {leadHeading.color};
+				margin-block-start: {leadHeading.marginBlockStart}rem;
+				margin-block-end: {leadHeading.marginBlockEnd}rem;
+				margin-inline: {leadHeading.marginInline}rem;
 				padding-block: {leadHeading.paddingBlock}rem;
 				padding-inline: {leadHeading.paddingInline}rem;
 				font-family: {leadHeading.font}, sans-serif;
@@ -77,6 +80,9 @@
 				? '#ffffff00'
 				: mainHeading.backgroundColor};
 				color: {mainHeading.color};
+				margin-block-start: {mainHeading.marginBlockStart}rem;
+				margin-block-end: {mainHeading.marginBlockEnd}rem;
+				margin-inline: {mainHeading.marginInline}rem;
 				padding-block: {mainHeading.paddingBlock}rem;
 				padding-inline: {mainHeading.paddingInline}rem;
 				font-family: {mainHeading.font}, sans-serif;
@@ -104,6 +110,9 @@
 				? '#ffffff00'
 				: content.backgroundColor};
 				color: {content.color};
+				margin-block-start: {content.marginBlockStart}rem;
+				margin-block-end: {content.marginBlockEnd}rem;
+				margin-inline: {content.marginInline}rem;
 				padding-block: {content.paddingBlock}rem;
 				padding-inline: {content.paddingInline}rem;
 				font-family: {content.font}, sans-serif;

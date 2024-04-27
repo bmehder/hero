@@ -23,6 +23,9 @@
 	}
 
 	let mainHeading = {
+    marginBlockStart: 0,
+    marginBlockEnd: 0,
+    marginInline: 0,
     paddingBlock: 0.5,
 		paddingInline: 1,
     backgroundColor: '#ffffff',
@@ -41,6 +44,9 @@
 	}
 
 	let leadHeading = {
+    marginBlockStart: 0,
+    marginBlockEnd: 0,
+    marginInline: 0,
     paddingBlock: 0.5,
 		paddingInline: 1,
 		backgroundColor: '#ffffff',
@@ -63,6 +69,9 @@
     backgroundColor: '#ffffff',
     isBackgroundTransparent: true,
 		color: '#ffffff',
+    marginBlockStart: 0,
+    marginBlockEnd: 0,
+    marginInline: 0,
     paddingBlock: 0.5,
 		paddingInline: 1,
 		font: 'Poppins',

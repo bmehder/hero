@@ -111,6 +111,48 @@
 		</div>
 
 		<div class="input-group">
+			<label for="lead-heading-margin-block-start">
+				Lead Heading Margin Block Start: {leadHeading.marginBlockStart}rem
+			</label>
+			<input
+				type="range"
+				id="lead-heading-margin-block-start"
+				bind:value={leadHeading.marginBlockStart}
+				min="0"
+				max="5"
+				step="0.5"
+			/>
+		</div>
+		
+		<div class="input-group">
+			<label for="lead-heading-margin-block-end">
+				Lead Heading Margin Block End: {leadHeading.marginBlockEnd}rem
+			</label>
+			<input
+				type="range"
+				id="lead-heading-margin-block-end"
+				bind:value={leadHeading.marginBlockEnd}
+				min="0"
+				max="5"
+				step="0.5"
+			/>
+		</div>
+		
+		<div class="input-group">
+			<label for="lead-heading-margin-inline">
+				Lead Heading Margin Inline: {leadHeading.marginInline}rem
+			</label>
+			<input
+				type="range"
+				id="lead-heading-margin-inline"
+				bind:value={leadHeading.marginInline}
+				min="0"
+				max="5"
+				step="0.5"
+			/>
+		</div>
+
+		<div class="input-group">
 			<label for="lead-heading-padding-block">
 				Lead Heading Padding Block: {leadHeading.paddingBlock}rem
 			</label>
@@ -280,6 +322,48 @@
 		</div>
 
 		<div class="input-group">
+			<label for="main-heading-margin-block-start">
+				Main Heading Margin Block Start: {mainHeading.marginBlockStart}rem
+			</label>
+			<input
+				type="range"
+				id="content-margin-block-start"
+				bind:value={mainHeading.marginBlockStart}
+				min="0"
+				max="5"
+				step="0.5"
+			/>
+		</div>
+		
+		<div class="input-group">
+			<label for="main-heading-margin-block-end">
+				Main Heading Margin Block End: {mainHeading.marginBlockEnd}rem
+			</label>
+			<input
+				type="range"
+				id="main-heading-margin-block-end"
+				bind:value={mainHeading.marginBlockEnd}
+				min="0"
+				max="5"
+				step="0.5"
+			/>
+		</div>
+		
+		<div class="input-group">
+			<label for="main-heading-margin-inline">
+				Main Heading Margin Inline: {mainHeading.marginInline}rem
+			</label>
+			<input
+				type="range"
+				id="main-heading-margin-inline"
+				bind:value={mainHeading.marginInline}
+				min="0"
+				max="5"
+				step="0.5"
+			/>
+		</div>
+
+		<div class="input-group">
 			<label for="main-heading-padding-block">
 				Main Heading Padding Block: {mainHeading.paddingBlock}rem
 			</label>
@@ -444,6 +528,48 @@
 				type="checkbox"
 				id="content-show"
 				bind:checked={content.isShow}
+			/>
+		</div>
+
+		<div class="input-group">
+			<label for="content-margin-block-start">
+				Content Margin Block Start: {content.marginBlockStart}rem
+			</label>
+			<input
+				type="range"
+				id="content-margin-block-start"
+				bind:value={content.marginBlockStart}
+				min="0"
+				max="5"
+				step="0.5"
+			/>
+		</div>
+		
+		<div class="input-group">
+			<label for="content-margin-block-end">
+				Content Margin Block End: {content.marginBlockEnd}rem
+			</label>
+			<input
+				type="range"
+				id="content-margin-block-end"
+				bind:value={content.marginBlockEnd}
+				min="0"
+				max="5"
+				step="0.5"
+			/>
+		</div>
+		
+		<div class="input-group">
+			<label for="content-margin-inline">
+				Content Margin Inline: {content.marginInline}rem
+			</label>
+			<input
+				type="range"
+				id="content-margin-inline"
+				bind:value={content.marginInline}
+				min="0"
+				max="5"
+				step="0.5"
 			/>
 		</div>
 
