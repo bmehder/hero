@@ -101,6 +101,43 @@
 	<!-- Lead -->
 	<details>
 		<summary>Lead</summary>
+
+		<div class="input-group two-col">
+			<label for="lead-heading-show"> Lead Heading? </label><input
+				type="checkbox"
+				id="lead-heading-show"
+				bind:checked={leadHeading.isShow}
+			/>
+		</div>
+
+		<div class="input-group">
+			<label for="lead-heading-padding-block">
+				Lead Heading Padding Block: {leadHeading.paddingBlock}rem
+			</label>
+			<input
+				type="range"
+				id="lead-heading-padding-block"
+				bind:value={leadHeading.paddingBlock}
+				min="0"
+				max="5"
+				step="0.5"
+			/>
+		</div>
+
+		<div class="input-group">
+			<label for="lead-heading-padding-inline">
+				Lead Heading Padding Inline: {leadHeading.paddingInline}rem
+			</label>
+			<input
+				type="range"
+				id="lead-heading-padding-inline"
+				bind:value={leadHeading.paddingInline}
+				min="0"
+				max="5"
+				step="0.5"
+			/>
+		</div>
+
 		<div class="input-group">
 			<label for="lead-heading">Lead Text</label>
 			<input type="text" id="lead-heading" bind:value={leadHeading.text} />
@@ -190,15 +227,85 @@
 
 		<div class="input-group">
 			<label for="lead-heading-color">
+				Lead Heading Background Color: {leadHeading.backgroundColor}
+			</label>
+			<input
+				type="color"
+				id="lead-heading-color"
+				bind:value={leadHeading.backgroundColor}
+			/>
+		</div>
+
+		<div class="input-group">
+			<label for="lead-heading-color">
 				Lead Heading Color: {leadHeading.color}
 			</label>
 			<input type="color" id="lead-heading-color" bind:value={leadHeading.color} />
+		</div>
+
+		<div class="input-group">
+			<label for="lead-heading-border-radius">
+				Lead Heading Border Radius: {leadHeading.borderRadius}px
+			</label>
+			<input
+				type="number"
+				id="lead-heading-border-radius"
+				bind:value={leadHeading.borderRadius}
+				min="0"
+				max="100"
+			/>
+		</div>
+
+		<div class="input-group two-col">
+			<label for="lead-heading-background-transparent">
+				Lead Heading Background Transparent?
+			</label><input
+				type="checkbox"
+				id="lead-heading-background-transparent"
+				bind:checked={leadHeading.isBackgroundTransparent}
+			/>
 		</div>
 	</details>
 
 	<!-- Main -->
 	<details>
 		<summary>Main</summary>
+
+		<div class="input-group two-col">
+			<label for="main-heading-show"> Show Main Heading? </label><input
+				type="checkbox"
+				id="main-heading-show"
+				bind:checked={mainHeading.isShow}
+			/>
+		</div>
+
+		<div class="input-group">
+			<label for="main-heading-padding-block">
+				Main Heading Padding Block: {mainHeading.paddingBlock}rem
+			</label>
+			<input
+				type="range"
+				id="main-heading-padding-block"
+				bind:value={mainHeading.paddingBlock}
+				min="0"
+				max="5"
+				step="0.5"
+			/>
+		</div>
+
+		<div class="input-group">
+			<label for="main-heading-padding-inline">
+				Main Heading Padding Inline: {mainHeading.paddingInline}rem
+			</label>
+			<input
+				type="range"
+				id="main-heading-padding-inline"
+				bind:value={mainHeading.paddingInline}
+				min="0"
+				max="5"
+				step="0.5"
+			/>
+		</div>
 
 		<div class="input-group">
 			<label for="main-heading">Main Text</label>
@@ -288,15 +395,85 @@
 
 		<div class="input-group">
 			<label for="main-heading-color">
+				Main Heading Background Color: {mainHeading.backgroundColor}
+			</label>
+			<input
+				type="color"
+				id="main-heading-color"
+				bind:value={mainHeading.backgroundColor}
+			/>
+		</div>
+
+		<div class="input-group">
+			<label for="main-heading-color">
 				Main Heading Color: {mainHeading.color}
 			</label>
 			<input type="color" id="main-heading-color" bind:value={mainHeading.color} />
+		</div>
+
+		<div class="input-group">
+			<label for="main-heading-border-radius">
+				Main Heading Border Radius: {mainHeading.borderRadius}px
+			</label>
+			<input
+				type="number"
+				id="main-heading-border-radius"
+				bind:value={mainHeading.borderRadius}
+				min="0"
+				max="100"
+			/>
+		</div>
+
+		<div class="input-group two-col">
+			<label for="main-heading-background-transparent">
+				Main Heading Background Transparent?
+			</label><input
+				type="checkbox"
+				id="main-heading-background-transparent"
+				bind:checked={mainHeading.isBackgroundTransparent}
+			/>
 		</div>
 	</details>
 
 	<!-- Content -->
 	<details>
 		<summary>Content</summary>
+
+		<div class="input-group two-col">
+			<label for="content-show"> Show Content? </label><input
+				type="checkbox"
+				id="content-show"
+				bind:checked={content.isShow}
+			/>
+		</div>
+
+		<div class="input-group">
+			<label for="content-padding-block">
+				Content Padding Block: {content.paddingBlock}rem
+			</label>
+			<input
+				type="range"
+				id="content-padding-block"
+				bind:value={content.paddingBlock}
+				min="0"
+				max="5"
+				step="0.5"
+			/>
+		</div>
+
+		<div class="input-group">
+			<label for="content-padding-inline">
+				Content Padding Inline: {content.paddingInline}rem
+			</label>
+			<input
+				type="range"
+				id="content-padding-inline"
+				bind:value={content.paddingInline}
+				min="0"
+				max="5"
+				step="0.5"
+			/>
+		</div>
 
 		<div class="input-group">
 			<label for="content">Content Text</label>
@@ -389,11 +566,53 @@
 			</label>
 			<input type="color" id="content-color" bind:value={content.color} />
 		</div>
+
+		<div class="input-group">
+			<label for="content-background-color">
+				Content Background Color: {content.backgroundColor}
+			</label>
+			<input
+				type="color"
+				id="content-background-color"
+				bind:value={content.backgroundColor}
+			/>
+		</div>
+
+		<div class="input-group">
+			<label for="content-border-radius">
+				Content Border Radius: {content.borderRadius}px
+			</label>
+			<input
+				type="number"
+				id="content-border-radius"
+				bind:value={content.borderRadius}
+				min="0"
+				max="100"
+			/>
+		</div>
+
+		<div class="input-group two-col">
+			<label for="content-background-transparent">
+				Content Background Transparent?
+			</label><input
+				type="checkbox"
+				id="content-background-transparent"
+				bind:checked={content.isBackgroundTransparent}
+			/>
+		</div>
 	</details>
 
 	<!-- Button -->
 	<details>
 		<summary>Button</summary>
+
+		<div class="input-group two-col">
+			<label for="button-show"> Show Button? </label><input
+				type="checkbox"
+				id="button-show"
+				bind:checked={button.isShow}
+			/>
+		</div>
 
 		<div class="input-group">
 			<label for="button-padding-block">
@@ -496,6 +715,43 @@
 				max="5"
 			/>
 		</div>
+	
+		<div class="input-group">
+			<label for="button-border-width">
+				Button Border Width: {button.borderWidth}px
+			</label>
+			<input
+				type="number"
+				id="button-border-width"
+				bind:value={button.borderWidth}
+				min="0"
+				max="20"
+			/>
+		</div>
+
+		<div class="input-group">
+			<label for="button-border-color">
+				Button Border Color: {button.borderColor}
+			</label>
+			<input
+				type="color"
+				id="button-border-color"
+				bind:value={button.borderColor}
+			/>
+		</div>
+		
+		<div class="input-group">
+			<label for="button-border-radius">
+				Button Border Radius: {button.borderRadius}px
+			</label>
+			<input
+				type="number"
+				id="button-border-radius"
+				bind:value={button.borderRadius}
+				min="0"
+				max="100"
+			/>
+		</div>
 
 		<div class="input-group">
 			<label for="button-background-color">
@@ -513,6 +769,16 @@
 				Button Color: {button.color}
 			</label>
 			<input type="color" id="button-color" bind:value={button.color} />
+		</div>
+
+		<div class="input-group two-col">
+			<label for="button-background-transparent">
+				Button Background Transparent?
+			</label><input
+				type="checkbox"
+				id="button-background-transparent"
+				bind:checked={button.isBackgroundTransparent}
+			/>
 		</div>
 	</details>
 
@@ -569,6 +835,11 @@
 
 	.controls details > * + * {
 		margin-block-start: 2rem;
+	}
+
+	details[open] {
+		padding-block-end: 2rem;
+		border-bottom: 2px solid;
 	}
 
 	.isOpen {

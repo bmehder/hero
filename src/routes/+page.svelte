@@ -23,6 +23,10 @@
 	}
 
 	let mainHeading = {
+    paddingBlock: 0.5,
+		paddingInline: 1,
+    backgroundColor: '#ffffff',
+    isBackgroundTransparent: true,
 		color: '#ffffff',
 		text: 'Lorem Ipsum Dolor',
 		font: 'Poppins',
@@ -30,37 +34,52 @@
 		fontWeight: 600,
 		lineHeight: 1,
 		letterSpacing: 0,
+    borderRadius: 0,
 		isUppercase: false,
 		isItalic: false,
+    isShow: true
 	}
 
 	let leadHeading = {
-		color: '#ffffff',
+    paddingBlock: 0.5,
+		paddingInline: 1,
+		backgroundColor: '#ffffff',
+    isBackgroundTransparent: true,
+    color: '#ffffff',
 		text: 'Lorem Ipsum',
 		font: 'Poppins',
 		fontSize: 1.5,
 		fontWeight: 300,
 		lineHeight: 1,
 		letterSpacing: 3,
+    borderRadius: 0,
 		isUppercase: true,
 		isItalic: false,
+    isShow: true
 	}
 
 	let content = {
-		color: '#ffffff',
 		text: lorem32,
+    backgroundColor: '#ffffff',
+    isBackgroundTransparent: true,
+		color: '#ffffff',
+    paddingBlock: 0.5,
+		paddingInline: 1,
 		font: 'Poppins',
 		fontSize: 1,
 		fontWeight: 500,
 		lineHeight: 1.5,
 		letterSpacing: 0,
+    borderRadius: 0,
 		isUppercase: false,
 		isItalic: false,
+    isShow: true
 	}
 
 	let button = {
 		text: 'Apply Now',
 		backgroundColor: '#ffffff',
+    isBackgroundTransparent: false,
 		color: '#323232',
 		paddingBlock: 0.5,
 		paddingInline: 1,
@@ -69,7 +88,11 @@
 		fontWeight: 500,
 		lineHeight: 1.5,
 		letterSpacing: 0,
+    borderWidth: 0,
+    borderColor: '#ffffff',
+    borderRadius: 0,
 		isUppercase: false,
+    isShow: true
 	}
 </script>
 

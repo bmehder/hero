@@ -48,14 +48,21 @@
 			class="lead-heading"
 			class:isUppercase={leadHeading.isUppercase}
 			class:italic={leadHeading.isItalic}
+			class:isShow={leadHeading.isShow}
 			style="
+				background-color: {leadHeading.isBackgroundTransparent
+				? '#ffffff00'
+				: leadHeading.backgroundColor};
 				color: {leadHeading.color};
+				padding-block: {leadHeading.paddingBlock}rem;
+				padding-inline: {leadHeading.paddingInline}rem;
 				font-family: {leadHeading.font}, sans-serif;
 				font-size: {leadHeading.fontSize}rem;
 				font-weight: {leadHeading.fontWeight};
 				line-height: {leadHeading.lineHeight};
 				letter-spacing: {leadHeading.letterSpacing}px;
 				text-shadow: 0 0 {app.textShadow}rem black;
+				border-radius: {leadHeading.borderRadius}px;
 			"
 		>
 			{leadHeading.text}
@@ -64,8 +71,14 @@
 			class="main-heading"
 			class:isUppercase={mainHeading.isUppercase}
 			class:italic={mainHeading.isItalic}
+			class:isShow={mainHeading.isShow}
 			style="
+				background-color: {mainHeading.isBackgroundTransparent
+				? '#ffffff00'
+				: mainHeading.backgroundColor};
 				color: {mainHeading.color};
+				padding-block: {mainHeading.paddingBlock}rem;
+				padding-inline: {mainHeading.paddingInline}rem;
 				font-family: {mainHeading.font}, sans-serif;
 				font-size: {mainHeading.fontSize}rem;
 				font-weight: {mainHeading.fontWeight};
@@ -73,6 +86,7 @@
 				letter-spacing: {mainHeading.letterSpacing}px;
 				text-shadow: 0 0 {app.textShadow}rem black;
 				text-align: center;
+				border-radius: {mainHeading.borderRadius}px;
 			"
 		>
 			{mainHeading.text}
@@ -84,41 +98,65 @@
 			class:text-align-center={app.textPositionX === 'center'}
 			class:text-align-right={app.textPositionX === 'end'}
 			class:italic={content.isItalic}
+			class:isShow={content.isShow}
 			style="
+				background-color: {content.isBackgroundTransparent
+				? '#ffffff00'
+				: content.backgroundColor};
 				color: {content.color};
+				padding-block: {content.paddingBlock}rem;
+				padding-inline: {content.paddingInline}rem;
 				font-family: {content.font}, sans-serif;
 				font-size: {content.fontSize}rem;
 				font-weight: {content.fontWeight};
 				line-height: {content.lineHeight};
 				letter-spacing: {content.letterSpacing}px;
 				text-shadow: 0 0 {app.textShadow}rem black;
+				border-radius: {content.borderRadius}px;
 			"
 		>
 			{content.text}
 		</div>
 
-		<button
+		<a
+			class="button"
 			class:isUppercase={button.isUppercase}
+			class:isShow={button.isShow}
 			style="
 				margin-block-start: 1rem;
 				padding-block: {button.paddingBlock}rem;
 				padding-inline: {button.paddingInline}rem;
-				background-color: {button.backgroundColor};
+				background-color: {button.isBackgroundTransparent
+				? '#ffffff00'
+				: button.backgroundColor};
 				color: {button.color};
 				font-family: {button.font}, sans-serif;
 				font-size: {button.fontSize}rem;
 				font-weight: {button.fontWeight};
 				line-height: {button.lineHeight};
+				text-decoration: none;
 				letter-spacing: {button.letterSpacing}px;
-				border: none;
+				border-style: solid;
+				border-width: {button.borderWidth}px;
+				border-color: {button.borderColor};
+				border-radius: {button.borderRadius}px;
 			"
+			href
 		>
 			{button.text}
-		</button>
+		</a>
 	</div>
 </section>
 
 <style>
+	.main-heading, .lead-heading, .content, .button {
+		display: none;
+	}
+
+	.isShow {
+		display: block;
+	}
+
 	.isUppercase {
 		text-transform: uppercase;
 	}
