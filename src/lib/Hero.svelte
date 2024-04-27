@@ -153,6 +153,7 @@
 				outline-width: {button.borderWidth}px;
 				outline-color: {button.borderColor};
 				outline-radius: {button.borderRadius}px;
+				border-radius: {button.borderRadius}px;
 			"
 			href={button.href}
 			target={button.isOpenBlank ? '_blank' : '_self'}
