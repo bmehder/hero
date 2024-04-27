@@ -123,7 +123,9 @@
 			class:isUppercase={button.isUppercase}
 			class:isShow={button.isShow}
 			style="
-				margin-block-start: 1rem;
+				margin-block-start: {button.marginBlockStart}rem;
+				margin-block-end: {button.marginBlockEnd}rem;
+				margin-inline: {button.marginInline}rem;
 				padding-block: {button.paddingBlock}rem;
 				padding-inline: {button.paddingInline}rem;
 				background-color: {button.isBackgroundTransparent
@@ -136,10 +138,11 @@
 				line-height: {button.lineHeight};
 				text-decoration: none;
 				letter-spacing: {button.letterSpacing}px;
-				border-style: solid;
-				border-width: {button.borderWidth}px;
-				border-color: {button.borderColor};
-				border-radius: {button.borderRadius}px;
+				border: none;
+				outline-style: solid;
+				outline-width: {button.borderWidth}px;
+				outline-color: {button.borderColor};
+				outline-radius: {button.borderRadius}px;
 			"
 			href
 		>

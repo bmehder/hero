@@ -103,7 +103,7 @@
 		<summary>Lead</summary>
 
 		<div class="input-group two-col">
-			<label for="lead-heading-show"> Lead Heading? </label><input
+			<label for="lead-heading-show"> Show Lead Heading? </label><input
 				type="checkbox"
 				id="lead-heading-show"
 				bind:checked={leadHeading.isShow}
@@ -614,6 +614,48 @@
 			/>
 		</div>
 
+		<div class="input-group">
+			<label for="button-margin-block-start">
+				Button Margin Block Start: {button.marginBlockStart}rem
+			</label>
+			<input
+				type="range"
+				id="button-margin-block-start"
+				bind:value={button.marginBlockStart}
+				min="0"
+				max="5"
+				step="0.5"
+			/>
+		</div>
+		
+		<div class="input-group">
+			<label for="button-margin-block-end">
+				Button Margin Block End: {button.marginBlockEnd}rem
+			</label>
+			<input
+				type="range"
+				id="button-margin-block-end"
+				bind:value={button.marginBlockEnd}
+				min="0"
+				max="5"
+				step="0.5"
+			/>
+		</div>
+		
+		<div class="input-group">
+			<label for="button-margin-inline">
+				Button Margin Inline: {button.marginInline}rem
+			</label>
+			<input
+				type="range"
+				id="button-margin-inline"
+				bind:value={button.marginInline}
+				min="0"
+				max="5"
+				step="0.5"
+			/>
+		</div>
+		
 		<div class="input-group">
 			<label for="button-padding-block">
 				Button Padding Block: {button.paddingBlock}rem
