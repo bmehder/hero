@@ -73,7 +73,7 @@
 	}
 </script>
 
-<div class="app">
+<div class="hero-app">
 	<Hero
 		bind:app
 		bind:content
@@ -94,7 +94,7 @@
 </div>
 
 <style>
-	.app {
+	.hero-app {
 		display: grid;
 		gap: 2rem;
 	}

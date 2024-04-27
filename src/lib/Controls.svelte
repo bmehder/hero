@@ -8,23 +8,47 @@
 	export let button
 	export let isOpen
 
-	let isShowIcon = false
+	let isShowCopied = false
 
 	const copyHero = () => {
-		navigator.clipboard.writeText(document.querySelector('.hero').outerHTML)
+		navigator.clipboard.writeText(
+			`<style>
+				.app {
+					display: grid;
+					gap: 2rem;
+				}
+				.isUppercase {
+					text-transform: uppercase;
+				}
+				.text-align-left {
+					text-align: left;
+				}
+				.text-align-center {
+					text-align: center;
+				}
+				.text-align-right {
+					text-align: right;
+				}
+				.italic {
+					font-style: italic;
+				}
+			</style>` + document.querySelector('.hero').outerHTML
+		)
 
-		isShowIcon = true
+		isShowCopied = true
 
-		setTimeout(() => (isShowIcon = false), 2000)
+		setTimeout(() => (isShowCopied = false), 2000)
 	}
 </script>
 
 <div class="controls" class:isOpen>
-	{#if isShowIcon}
-		<Copied />
-	{/if}
-
-	<button class="secondary" on:click={copyHero}>Copy HTML</button>
+	<button class="secondary" on:click={copyHero} disabled={isShowCopied}>
+		{#if isShowCopied}
+			<Copied />
+		{:else}
+			Copy HTML
+		{/if}
+	</button>
 
 	<!-- Background -->
 	<details>
