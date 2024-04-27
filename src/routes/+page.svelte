@@ -119,9 +119,9 @@
 		bind:mainHeading
 		bind:button
 		on:click={handleClick}
-	/>
-
-	<Controls
+		/>
+		
+		<Controls
 		bind:app
 		bind:content
 		bind:leadHeading

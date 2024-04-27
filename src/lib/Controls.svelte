@@ -17,7 +17,7 @@
 
 	let isShowCopied = false
 
-	const copyHero = () => {
+	const copyHeroHTML = () => {
 		navigator.clipboard.writeText(
 			stylesAsString + document.querySelector('.hero').outerHTML
 		)
@@ -29,7 +29,7 @@
 </script>
 
 <div class="controls" class:isOpen>
-	<button class="secondary" on:click={copyHero} disabled={isShowCopied}>
+	<button class="secondary" on:click={copyHeroHTML} disabled={isShowCopied}>
 		{#if isShowCopied}
 			<Copied />
 		{:else}

@@ -24,4 +24,15 @@ export const stylesAsString = `<style>
 				.italic {
 					font-style: italic;
 				}
+				.isShowOutline * {
+					outline: 1px solid lime;
+				}
+
+				.main-heading, .lead-heading, .content, .button {
+					display: none;
+				}
+
+				.isShow {
+					display: block;
+				}
 			</style>`
