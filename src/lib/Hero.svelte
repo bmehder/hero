@@ -148,10 +148,9 @@
 				line-height: {button.lineHeight};
 				text-decoration: none;
 				letter-spacing: {button.letterSpacing}px;
-				border: none;
-				outline-style: solid;
-				outline-width: {button.borderWidth}px;
-				outline-color: {button.borderColor};
+				border-style: solid;
+				border-width: {button.borderWidth}px;
+				border-color: {button.borderColor};
 				border-radius: {button.borderRadius}px;
 			"
 			href={button.href}

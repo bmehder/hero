@@ -37,7 +37,7 @@
 		{/if}
 	</button>
 
-	<div>
+	<div class="show-outline">
 		<label for="show-outline"> Show Outline (dev)? </label><input
 			type="checkbox"
 			id="show-outline"
@@ -73,6 +73,13 @@
 		border-bottom-left-radius: 0.5rem;
 		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 		transition: right 300ms ease-in-out;
+	}
+
+	.show-outline {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 0.5rem;
 	}
 
 	.isOpen {
