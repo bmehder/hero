@@ -3,7 +3,8 @@
 </script>
 
 <details>
-	<summary>Lead Heading</summary>
+	<!-- svelte-ignore a11y-no-redundant-roles -->
+	<summary role="button" class="secondary">Lead Heading</summary>
 
 	<div>
 		<label for="lead-heading-show"> Show Lead Heading? </label><input

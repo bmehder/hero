@@ -3,7 +3,8 @@
 </script>
 
 <details>
-	<summary>Content</summary>
+	<!-- svelte-ignore a11y-no-redundant-roles -->
+	<summary role="button" class="secondary">Content</summary>
 
 	<div>
 		<label for="content-show"> Show Content? </label><input

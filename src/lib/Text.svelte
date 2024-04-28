@@ -3,7 +3,8 @@
 </script>
 
 <details>
-	<summary>Text</summary>
+	<!-- svelte-ignore a11y-no-redundant-roles -->
+	<summary role="button" class="secondary">Text</summary>
 
 	<div>
 		<label for="text-position-x">Text Position X</label>

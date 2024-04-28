@@ -5,15 +5,6 @@ body {
 	overflow: hidden;
 }
 
-.hero-app details[open] {
-	padding-block-end: 2rem;
-	border-bottom: 2px solid;
-}
-
-.hero-app summary {
-	font-size: 1.25rem;
-}
-
 .hero-app .controls details > * + * {
 	margin-block-start: 2rem;
 }

@@ -3,7 +3,8 @@
 </script>
 
 <details>
-	<summary>Background</summary>
+	<!-- svelte-ignore a11y-no-redundant-roles -->
+	<summary role="button" class="secondary">Background</summary>
 
 	<div>
 		<label for="background-image">Background Image URL</label>

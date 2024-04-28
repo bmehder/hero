@@ -29,7 +29,7 @@
 </script>
 
 <div class="controls" class:isOpen>
-	<button class="secondary" on:click={copyHeroHTML} disabled={isShowCopied}>
+	<button on:click={copyHeroHTML} disabled={isShowCopied}>
 		{#if isShowCopied}
 			<Copied />
 		{:else}
@@ -40,6 +40,7 @@
 	<div class="show-outline">
 		<label for="show-outline"> Show Outline (dev)? </label><input
 			type="checkbox"
+			role="switch"
 			id="show-outline"
 			bind:checked={app.isShowOutline}
 		/>
@@ -64,7 +65,7 @@
 		max-height: 100dvh;
 		position: absolute;
 		display: grid;
-		gap: 2rem;
+		gap: 1rem;
 		right: -100%;
 		z-index: 1;
 		padding: 2rem;

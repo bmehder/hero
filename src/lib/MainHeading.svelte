@@ -3,7 +3,8 @@
 </script>
 
 <details>
-	<summary>Main Heading</summary>
+	<!-- svelte-ignore a11y-no-redundant-roles -->
+	<summary role="button" class="secondary">Main Heading</summary>
 
 	<div>
 		<label for="main-heading-show"> Show Main Heading? </label><input
